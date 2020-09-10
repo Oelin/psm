@@ -1,12 +1,14 @@
-let prepare = require('./prepare')
-ler parse = require('./parse')
+let clean = require('./prepare')
+let parse = require('./parse')
 
 
 function assem(ast) {
+  
 }
 
 
 function main(src) {
+  
 }
 
 

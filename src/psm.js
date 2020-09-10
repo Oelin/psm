@@ -1,4 +1,4 @@
-let clean = require('./prepare')
+let clean = require('./clean')
 let parse = require('./parse')
 
 

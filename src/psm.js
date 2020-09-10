@@ -7,9 +7,6 @@ function assem(ast) {
 }
 
 
-function main(src) {
+moule.exports = function(src) {
   
 }
-
-
-moule.exports = main

@@ -1,2 +1,2 @@
 ## psm
-psm is an assembler for the pixy processor.
+psm is an assembler for [pixy](https://github.com/Oelin/pixy).

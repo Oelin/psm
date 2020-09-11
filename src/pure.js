@@ -1,18 +1,13 @@
-let white = /^\s*[\r\n]+|#.*/gm
-let name = /^([a-zA-Z_][\w_]*):/
-let nend = /:[\n\s]+/g
-
-
 let prune = src =>
-  src.replaceAll(white, '')
-  .replaceAll(nend, ':').trim()
+  src.replaceAll(token.white, '')
+  .replaceAll(token.nend, ':').trim()
 
 
 let names = list => {
   let m
 
   return list.map(e =>
-    (m = e.match(name)) && m[1])
+    (m = e.match(token.name)) && m[1])
 }
 
 

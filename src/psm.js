@@ -1,7 +1,3 @@
-let clean = require('./clean')
-let parse = require('./parse')
-
-
 function assem(ast) {
   
 }

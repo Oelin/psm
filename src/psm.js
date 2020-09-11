@@ -3,7 +3,7 @@ const token = {
   name: /^([a-zA-Z_][\w_]*):/,
   nend: /:[\n\s]+/g,
   data: /(".*"|\d+)/g,
-  code: /^[a-z]+\s([a-d]|\d+)(,[a-d]|\d+)*$/
+  code: /^[a-z]+\s([a-d]|\d+)(\s*,([a-d]|\d+))*$/
 }
 
 

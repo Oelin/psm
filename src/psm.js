@@ -1,8 +1,8 @@
-function assem(ast) {
-  
+let assem = ast => {
+	
 }
 
 
-moule.exports = function(src) {
-  
+let main = src => {
+	
 }

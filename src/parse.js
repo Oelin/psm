@@ -4,8 +4,7 @@ let array = line => {
   return (
     m = [...line.matchAll(token.data)]
     .map(e => JSON.parse(e[0]))
-  )
-  .length && m
+  ).length && m
 }
 
 

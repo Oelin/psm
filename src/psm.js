@@ -1,4 +1,4 @@
-const codes = [
+const ops = [
   'add reg reg',
   'add reg val',
   'sub reg reg',
@@ -18,7 +18,7 @@ const codes = [
 ]
 
 
-const token = {
+const tok = {
   white: /^\s*[\r\n]+|#.*/gm,
   name: /^([a-zA-Z_][\w_]*):/,
   nend: /:[\n\s]+/g,
@@ -27,11 +27,6 @@ const token = {
 }
 
 
-let assemble = ast => {
-	
-}
-
-
-let main = src => {
+let psm = src => {
 	
 }

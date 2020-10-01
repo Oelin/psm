@@ -11,7 +11,7 @@ const ops = [
   'mov reg reg',
   'mov reg val',
   'load reg val',
-  'sto reg reg,
+  'sto reg reg',
   'sto val reg',
   'test reg reg',
   'stop'

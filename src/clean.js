@@ -15,8 +15,7 @@ let clean = src => {
   src = trim(src)
   let list = src.split('\n')
 
-  names(list)
-  .forEach((name, n) => {
+  names(list).forEach((name, n) => {
     src = src.replaceAll(`$${name}`, n)
     .replaceAll(`${name}:`, '')
   })

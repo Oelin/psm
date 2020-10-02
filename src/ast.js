@@ -15,4 +15,5 @@ let code = line => {
 
 
 let ast = lines =>
-  lines.map(e => e.match(tok.code) ? code(e) : array(e))
+  lines.map(e => e.match(tok.code) ? 
+  code(e) : array(e))

@@ -1,4 +1,13 @@
-const ops = [
+let tok = {
+  white: /^\s*[\r\n]+|#.*/gm,
+  name: /^([a-zA-Z_][\w_]*):/,
+  colon: /:[\n\s]+/g,
+  data: /(".*"|\d+)/g,
+  code: /^[a-z]+\s([a-d]|\d+)(\s*,([a-d]|\d+))*$/
+}
+
+
+let ops = [
   'add reg reg',
   'add reg val',
   'sub reg reg',
@@ -16,15 +25,6 @@ const ops = [
   'test reg reg',
   'stop'
 ]
-
-
-const tok = {
-  white: /^\s*[\r\n]+|#.*/gm,
-  name: /^([a-zA-Z_][\w_]*):/,
-  nend: /:[\n\s]+/g,
-  data: /(".*"|\d+)/g,
-  code: /^[a-z]+\s([a-d]|\d+)(\s*,([a-d]|\d+))*$/
-}
 
 
 let psm = src => {

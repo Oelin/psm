@@ -14,5 +14,5 @@ let code = line => {
 }
 
 
-let parse = list =>
-  list.map(e => e.match(tok.code) ? code(e) : array(e))
+let ast = lines =>
+  lines.map(e => e.match(tok.code) ? code(e) : array(e))

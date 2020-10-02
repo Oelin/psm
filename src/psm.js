@@ -1,13 +1,13 @@
 let tok = {
   white: /^\s*[\r\n]+|#.*/gm,
+  nend: /:[\n\s]+/g,
   name: /^([a-zA-Z_][\w_]*):/,
-  colon: /:[\n\s]+/g,
   data: /(".*"|\d+)/g,
   code: /^[a-z]+\s([a-d]|\d+)(\s*,([a-d]|\d+))*$/
 }
 
 
-let ops = [
+let codes = [
   'add reg reg',
   'add reg val',
   'sub reg reg',

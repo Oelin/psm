@@ -10,8 +10,7 @@ let array = line =>
 
 
 let cut = line =>
-  line.replaceall(',', '').replaceAll(/\s+/g, ' ')
-  .split(' ')
+  line.replaceall(',', '').replaceAll(/\s+/g, ' ').split(' ')
 
 
 // parses a line of assembly code

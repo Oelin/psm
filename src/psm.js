@@ -1,23 +1,31 @@
+let data = /("[^"]*"|\d+)/g
+let code = /a line of code/
+let op = /([abd-y]+)([zc])?/
+let white = /^\s*[\r\n]+|#.*/gm
+let name = /^([a-zA-Z_][\w_]*):/
+let eon = /:[\n\s]+/g
+
+
 let codes = [
-  'add reg reg',
-  'add reg val',
-  'sub reg reg',
-  'sub reg val',
-  'and reg reg',
-  'or reg reg',
-  'xor reg reg',
-  'not reg',
-  'b val',
-  'mov reg reg',
-  'mov reg val',
-  'load reg val',
-  'sto reg reg',
-  'sto val reg',
-  'test reg reg',
+  'addrr',
+  'addrv',
+  'subrr',
+  'subrv',
+  'andrr',
+  'orrr',
+  'xorrr',
+  'notr',
+  'bv',
+  'movrr',
+  'movrv',
+  'loadrv',
+  'storr',
+  'stovr',
+  'testrr',
   'pass'
 ]
 
 
 let psm = src => {
-	
+  let tree = ast(strip(src))
 }

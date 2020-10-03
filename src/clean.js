@@ -1,13 +1,18 @@
+let white = /^\s*[\r\n]+|#.*/gm
+let name = /^([a-zA-Z_][\w_]*):/
+let eon = /:[\n\s]+/g
+
+
 let trim = src =>
-  src.replaceAll(tok.white, '')
-  .replaceAll(tok.nend, ':').trim()
+  src.replaceAll(white, '')
+  .replaceAll(eon, ':').trim()
 
 
 let names = list => {
   let m
 
   return list.map(e =>
-  (m = e.match(tok.name)) && m[1])
+  (m = e.match(name)) && m[1])
 }
 
 

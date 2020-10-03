@@ -4,7 +4,7 @@ psm is an assembler for [pixy](https://circuitverse.org/27264/projects/pixy-inde
 #### include in your site
 
 ```html
-<script src='scripts/psm.js' async></script>
+<script src='/path/to/psm.js' async></script>
 ```
 
 #### produce pixy binaries

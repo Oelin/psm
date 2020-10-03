@@ -17,9 +17,8 @@ let cut = line =>
 // parses a line of assembly code
 
 let code = line => {
-	let parts = cut(line)
-	
-	return parts
+  let parts = cut(line)
+  return parts
 }
 
 

@@ -1,24 +1,26 @@
-let elem = /("[^"]*"|\d+)/g
-let loc = /a line of code/
-
-
 let cut = line =>
-  line.replaceall(',', '').replaceAll(/\s+/g, ' ').split(' ')
+  line.replaceAll(',', ' ')
+  .replaceAll(/\s+/g, ' ')
+  .split(' ')
 
 
-// parses an array of data values 
-
-let data = line =>
-  [...line.matchAll(elem)].map(e => JSON.parse(e[0]))
+let types = args =>
+  args.map(a => isNaN(parseInt(a)) ? 'r' : 'v')
 
 
-// parses a line of assembly code
+// parser
 
-let code = line => {
-  let parts = cut(line)
-  return parts
+let pdata = line =>
+  [...line.matchAll(data)]
+  .map(e => JSON.parse(e[0]))
+
+
+let pcode = line => {
+	
 }
 
 
+// construct an abstract syntax tree
+
 let ast = src =>
-  src.map(e => e.match(loc) ? code(e) : data(e))
+  src.map(e => e.match(code) ? pcode(e) : pdata(e))

@@ -1,12 +1,12 @@
-let array = line => {
-  let m
+let op = /([abd-y]+)([zc])?/
+let reg = /[a-z]/g
+let elem = /("[^"]*"|\d+)/g
+let loc = /a line of code/
 
-  return (
-    m = [...line.matchAll(tok.data)]
-    .map(e => JSON.parse(e[0]))
-  )
-  .length && m
-}
+
+let array = line =>
+  [...line.matchAll(elem)]
+  .map(e => JSON.parse(e[0]))
 
 
 let code = line => {
@@ -14,6 +14,5 @@ let code = line => {
 }
 
 
-let ast = lines =>
-  lines.map(e => e.match(tok.code) ? 
-  code(e) : array(e))
+let ast = list =>
+  list.map(e => e.match(loc) ? code(e) : array(e))

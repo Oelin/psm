@@ -20,5 +20,5 @@ let code = line => {
 }
 
 
-let parse = list =>
-  list.map(e => e.match(loc) ? code(e) : data(e))
+let ast = src =>
+  src.map(e => e.match(loc) ? code(e) : data(e))

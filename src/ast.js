@@ -5,8 +5,7 @@ let loc = /a line of code/
 
 
 let array = line =>
-  [...line.matchAll(elem)]
-  .map(e => JSON.parse(e[0]))
+  [...line.matchAll(elem)].map(e => JSON.parse(e[0]))
 
 
 let code = line => {
